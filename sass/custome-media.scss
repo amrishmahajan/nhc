@@ -3,9 +3,3 @@
 @import 'mixins';
 
 
-body{
-    @include respond-to($phone-landscape)
-    {
-        background: #f00;
-    }
-}

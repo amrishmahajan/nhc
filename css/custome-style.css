@@ -368,11 +368,17 @@ header {
       font-family: 'latobold';
       margin-right: 15px;
       text-align: right; }
+      @media only screen and (max-width: 991px) {
+        header .top_head .logged-user > p {
+          font-size: 16px; } }
       header .top_head .logged-user > p > span {
         display: block;
         font-size: 14px;
         text-transform: uppercase;
         font-family: 'latoregular'; }
+        @media only screen and (max-width: 991px) {
+          header .top_head .logged-user > p > span {
+            font-size: 13px; } }
   header .bottom_head {
     background: #e5e5e5;
     color: #00467f;

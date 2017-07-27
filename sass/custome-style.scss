@@ -286,11 +286,19 @@ header{
 				font-family: 'latobold';
 				margin-right: 15px;
 				text-align: right;
+				 @include respond-to($medium-intermediate)
+					{
+						font-size: 16px;
+					}
 				> span{
 					display: block;
 					font-size: $font-smaller;
 					text-transform: uppercase;
 					font-family: 'latoregular';
+					@include respond-to($medium-intermediate)
+					{
+						font-size: 13px;
+					}
 				}
 			}
 		}

@@ -451,6 +451,17 @@ header {
     width: 0;
     top: -28px;
     right: 0px; }
+  @media only screen and (max-width: 859px) {
+    .b-notification {
+      right: calc(0% + 294px); } }
+  @media only screen and (max-width: 667px) {
+    .b-notification {
+      right: inherit;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+      transform: translate(-50%, 0%); } }
   .b-notification .b-header {
     background: #fff;
     color: #000;

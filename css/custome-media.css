@@ -77,12 +77,4 @@
   /* Support for IE. */
   font-feature-settings: 'liga'; }
 
-@media only screen and (max-width: 991px) {
-  body {
-    background: #f00; } }
-
-@media only screen and (max-width: 991px) {
-  header .top_head .logged-user > p {
-    font-size: 16px; } }
-
 /*# sourceMappingURL=custome-media.css.map */

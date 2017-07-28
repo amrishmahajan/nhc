@@ -3,26 +3,26 @@
 @import 'mixins';
 
 
-body{
+//body{
     // @include respond-to($phone-landscape)
     // {
     //     background: #f00;
     // }
-    @include respond-to($medium-intermediate)
-    {
-       background: #f00;
-    }
-}
-header {
-    .top_head {
-        .logged-user {
-            > p{
-                @include respond-to($medium-intermediate)
-                {
-                    font-size: 16px;
-                }
-            }
-        }    
-    }
+    // @include respond-to($medium-intermediate)
+    // {
+    //    background: #f00;
+    // }
+//}
+// header {
+//     .top_head {
+//         .logged-user {
+//             > p{
+//                 @include respond-to($medium-intermediate)
+//                 {
+//                     font-size: 16px;
+//                 }
+//             }
+//         }    
+//     }
     
-}
+// }

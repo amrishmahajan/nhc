@@ -56,8 +56,14 @@ ul{margin: 0px; padding: 0px; list-style: none;}
 	color: $nhc-white;
 	text-align: center;
 }
-.icon-sm{
+.material-icons.icon-sm{
 	font-size:$font-bigger; 
+	@include respond-to($medium-intermediate-2){
+		font-size: $font-medium-intern;
+	}
+	@include respond-to($extra-samll-intemediate){
+		font-size:20px;
+	}
 }
 .round-sm{
 	border-radius: 100%;
@@ -74,6 +80,12 @@ ul{margin: 0px; padding: 0px; list-style: none;}
 	position: relative;
 	margin-right: 40px;
 	margin-top: 8px;
+	@include respond-to($medium-intermediate-2){
+		margin-right: 30px;
+	}
+	@include respond-to($extra-samll-intemediate){
+		margin-right: 21px;
+	}
 }
 .rounded-sm{
 	img{
@@ -244,6 +256,11 @@ header{
 			position: absolute;
 			left: 50%;
 			top: 50%;
+			z-index: 99;
+			@include respond-to($mobile){
+				top: 0px;
+				@include transform(translate(-50%,0%));
+			}
 		}
 		.logo ~ span{
 			margin-right: 25px;
@@ -259,6 +276,10 @@ header{
 			position: relative;
 			font-size: $font-medium;
 			margin-top: 8px;
+			@include respond-to($mobile){
+				margin-bottom: 30px;
+				margin-top: 17px;
+			}
 			input[type="text"]{
 				border: 0px;
 				border-bottom: 1px solid $nhc-white;
@@ -278,7 +299,15 @@ header{
 				font-size: $font-big;
 			}
 		}
-
+		
+		.user-notification{
+			 @include respond-to($mobile){
+				clear: both;
+				display: table;
+				float: none !important;
+				margin: auto;
+			 }
+		}
 		.logged-user{
 			> p{
 				float: right;
@@ -288,8 +317,12 @@ header{
 				text-align: right;
 				 @include respond-to($medium-intermediate)
 					{
-						font-size: 16px;
+						font-size: $font-small;
 					}
+				@include respond-to($extra-samll-intemediate)
+					{
+						font-size: $font-smaller;
+					}	
 				> span{
 					display: block;
 					font-size: $font-smaller;
@@ -297,7 +330,11 @@ header{
 					font-family: 'latoregular';
 					@include respond-to($medium-intermediate)
 					{
-						font-size: 13px;
+						font-size: $font-default;
+					}
+					@include respond-to($extra-samll-intemediate)
+					{
+						font-size: 12px;
 					}
 				}
 			}
@@ -311,10 +348,12 @@ header{
 		font-size: 22px;
 		text-transform: uppercase;
 		p{
-			@include transform(translate(-50%,-50%));
-			position: absolute;
-			left: 50%;
-			top: 50%;
+			display: inline-block;
+			padding: 9px 0;
+			@include respond-to($extra-samll-landscape){
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -324,7 +363,7 @@ header{
 	z-index: 99;
 	background: $nhc-white;
 	color:$nhc-black;
-	right: calc(100% - 45%);
+	right: calc(0% + 340px);
 	top: 100%;
 	margin-top: 8px;
 	@include transition(all 0.2s ease-in-out 0s);
@@ -460,7 +499,7 @@ header{
 
 // CUSTOME DROP DOWN
 
-.custom-dropdown{float:left; width:20%;padding:5px 8px;position:relative; cursor:pointer;background: #ccc;padding: 9px 5px;
+.custom-dropdown{float:left; padding:5px 8px;position:relative; cursor:pointer;background: #ccc;padding: 9px 5px;
 	/* ============================ FOR INPUT TEXT FIELD ============================ */
 	input[type="text"]{ color: transparent;    cursor: pointer;    text-align: center; width: 100%; background: none;border: none;}
 	i{
@@ -469,6 +508,10 @@ header{
 		top: 50%;
 		@include transform(translate(-0%,-50%));
 		z-index: 999;
+	}
+	@include respond-to($extra-samll-landscape){
+		width: 100%;
+		margin-right: 5px;
 	}
 }
 
@@ -573,6 +616,9 @@ header{
 			p{
 				float:left;
 				width: 90%;
+				@include respond-to($medium-intermediate ){
+					width: 85%;
+				}
 			}
 			i{
 				float: right;
@@ -591,6 +637,12 @@ header{
 					&:first-child{
 						margin-left: -10px;
 						margin-right: 15px;
+					}
+				}
+				p{
+					width: calc(90% - 30px);
+					@include respond-to($medium-intermediate){
+						width: calc(85% - 30px);
 					}
 				}
 			}
@@ -615,13 +667,28 @@ header{
 			border-radius: 0;
 			margin-bottom: 0;
 			border-top: 1px solid $nhc-lightsky;
+			@include respond-to($medium-landscape){
+				font-size: $font-smaller;
+			}
 			img{
 				display: table-cell;
+				@include respond-to($medium-intermediate){
+					width: 100%;
+				}
 			}
 			p{
 				display: table-cell;
 				width: 69%;
 				vertical-align: middle;
+				padding: 0 15px;
+				@include respond-to($medium-intermediate){
+					width: 55%;
+				}
+				@include respond-to($mobile){
+					display: block;
+					width: 100%;
+					padding: 20px 15px;
+				}
 			}
 			i{
 				float: right;
@@ -652,6 +719,13 @@ header{
 	right: 0px;
 	height: 100%;
 	margin-right: 5px;
+	@include respond-to($mobile){
+		top: 100%;
+		margin-top: 15px;
+		height: 20%;
+		margin-right: 18px;
+		width: 96%;
+	}
 	cursor: pointer;
 	.rouded_border{
 		border: 2px dashed;
@@ -675,6 +749,9 @@ header{
 	.grid_panel_body{
 		min-height: 305px;
 		position: relative;
+		@include respond-to($medium-intermediate){
+			min-height: 268px;
+		}
 		.vert_content{
 			position: absolute;
 			@include transform(translate(-0%,-50%));

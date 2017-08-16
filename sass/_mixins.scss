@@ -83,6 +83,26 @@
         top: -28px;
         right: 0px;
         @content;
+    
+      
+
+    @include respond-to($imobile-6-landscape){
+        left: 50%;
+        @include transform(translate(-50%,0%));
+    }
+    @include respond-to($extra-samll-landscape){
+        left: 0;
+        @include transform(translate(0%,0%));
+    }  
+    
+    
+
+        // @include respond-to($mobile){
+        //     right: inherit;
+        //     transform: translateX(-50%);
+        //     margin-left: 68px;
+        //     left: 50%;
+        // }
     }
 }
 

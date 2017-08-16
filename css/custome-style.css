@@ -434,9 +434,10 @@ header {
   z-index: 99;
   background: #fff;
   color: #000;
-  right: calc(0% + 340px);
+  right: 0;
   top: 100%;
   margin-top: 8px;
+  width: 26vw;
   -webkit-transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
   -ms-transition: all 0.2s ease-in-out 0s;
@@ -451,9 +452,23 @@ header {
     width: 0;
     top: -28px;
     right: 0px; }
+    @media only screen and (max-width: 667px) {
+      .b-notification::before {
+        left: 50%;
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%); } }
+    @media only screen and (max-width: 480px) {
+      .b-notification::before {
+        left: 0;
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%); } }
   @media only screen and (max-width: 859px) {
     .b-notification {
-      right: calc(0% + 294px); } }
+      width: 50vw; } }
   @media only screen and (max-width: 667px) {
     .b-notification {
       right: inherit;
@@ -462,6 +477,13 @@ header {
       -ms-transform: translate(-50%, 0%);
       -ms-transform: translate(-50%, 0%);
       transform: translate(-50%, 0%); } }
+  @media only screen and (max-width: 480px) {
+    .b-notification {
+      -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+      left: 0; } }
   .b-notification .b-header {
     background: #fff;
     color: #000;
@@ -485,6 +507,7 @@ header {
     padding: 10px 15px;
     clear: both;
     float: left;
+    background: #fff;
     width: 100%; }
     .b-notification li.active {
       background: #d9e3ec; }

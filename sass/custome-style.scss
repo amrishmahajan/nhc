@@ -363,20 +363,32 @@ header{
 	z-index: 99;
 	background: $nhc-white;
 	color:$nhc-black;
-	right: calc(0% + 340px);
+	right: 0;
 	top: 100%;
 	margin-top: 8px;
+	width:26vw;
 	@include transition(all 0.2s ease-in-out 0s);
 	
 	@include panel-cap;
 	@include respond-to($medium-intermediate-2){
-		right: calc(0% + 294px);
+		// right: calc(0% + 294px);
+		width:50vw;
 	}
+
+
+	
+
 	@include respond-to($imobile-6-landscape){
 		right: inherit;
 		left: 50%;
 		@include transform(translate(-50%,0%));
 	}
+	@include respond-to($extra-samll-landscape){
+		 @include transform(translate(0%,0%));
+		  left: 0;
+	}
+
+	
 	
 	.b-header{
 		background: $nhc-white;
@@ -405,6 +417,7 @@ header{
 		padding: 10px 15px;
 		clear: both;
 		float: left;
+		background: $nhc-white;
 		width: 100%;
 		&.active{
 			background: #d9e3ec;
@@ -799,7 +812,6 @@ header{
 	width: 100%;
 	border: 1px solid $nhc-jungle-mist;
 }
-
 
 
 

@@ -513,11 +513,25 @@ header {
       background: #d9e3ec; }
     .b-notification li.all-notifications {
       text-align: center; }
+    @media only screen and (max-width: 767px) {
+      .b-notification li {
+        text-align: center; } }
+    @media only screen and (max-width: 767px) {
+      .b-notification li strong {
+        display: block; } }
     .b-notification li figure {
       float: left; }
+      @media only screen and (max-width: 767px) {
+        .b-notification li figure {
+          display: table;
+          float: none;
+          margin: auto; } }
     .b-notification li p {
       padding-left: 72px;
       margin: 0px; }
+      @media only screen and (max-width: 767px) {
+        .b-notification li p {
+          padding-left: 0; } }
       .b-notification li p span {
         display: block;
         font-size: 13px;
@@ -537,9 +551,16 @@ header {
     .b-notification.notification-setting li p {
       margin: 0;
       padding-left: 72px; }
+      @media only screen and (max-width: 767px) {
+        .b-notification.notification-setting li p {
+          padding-left: 0; } }
       .b-notification.notification-setting li p > span {
         float: right;
         margin: 0; }
+        @media only screen and (max-width: 767px) {
+          .b-notification.notification-setting li p > span {
+            float: none;
+            display: block; } }
 
 .sliding-nav {
   background: #323641;

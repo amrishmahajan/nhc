@@ -386,7 +386,7 @@ header{
 	@include respond-to($extra-samll-landscape){
 		 @include transform(translate(0%,0%));
 		  left: 0;
-	}
+	}	
 
 	
 	
@@ -425,12 +425,29 @@ header{
 		&.all-notifications{
 			text-align: center;
 		}
+
+		@include respond-to($mobile){
+			text-align: center;
+		}
+		strong{
+			@include respond-to($mobile){
+			display: block;
+		}
+		}
 		figure{
 			float: left;
+			@include respond-to($mobile){
+				 display: table;
+					float: none;
+					margin: auto;
+			}
 		}
 		p{
 			padding-left: 72px;
 			margin: 0px;
+			@include respond-to($mobile){
+				padding-left: 0;
+			}
 			span{
 				display: block;
 				font-size: $font-default;
@@ -458,9 +475,17 @@ header{
 			p{
 				margin: 0;
 				padding-left: 72px;
+				@include respond-to($mobile){
+					padding-left: 0;
+				}
 				> span{
 					float:right;
 					margin: 0;
+
+					@include respond-to($mobile){
+						float: none;
+						display: block;
+					}
 				
 				}
 			}
